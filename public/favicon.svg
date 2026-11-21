@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0B3C91"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="46" fill="#FFFFFF" stroke="url(#brandGrad)" stroke-width="6"/>
+  <!-- Lotus & Dawn Silhouette -->
+  <path d="M50 18 C50 32 30 48 24 68 C38 65 46 60 50 46 C54 60 62 65 76 68 C70 48 50 32 50 18 Z" fill="url(#brandGrad)"/>
+  <circle cx="50" cy="28" r="5" fill="#3B82F6"/>
+</svg>

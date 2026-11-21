@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: #F8FAFC;
+    color: #1E293B;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Gradients & Mesh backgrounds */
+.bg-mesh-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(11, 60, 145, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 60, 145, 0.04) 1px, transparent 1px);
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(11, 60, 145, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 30px -5px rgba(11, 60, 145, 0.05), 0 0 1px 1px rgba(11, 60, 145, 0.05);
+}
+
+.glass-panel-dark {
+  background: rgba(11, 60, 145, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  box-shadow: 0 20px 50px rgba(6, 35, 89, 0.4);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(11, 60, 145, 0.12);
+}
+
+/* Subtle fintech shimmer animation */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.animate-shimmer-fast {
+  animation: shimmer 2s infinite ease-in-out;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
