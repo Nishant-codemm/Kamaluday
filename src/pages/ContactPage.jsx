@@ -105,18 +105,17 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
-                    Registered Office (Placeholder)
+                    Registered Office
                   </span>
                   <h3 className="text-base font-bold text-[#091E42] mt-0.5">
                     Kamal Uday Finance Private Limited
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
-                    Tower B, Financial District, Outer Ring Road,<br />
-                    Tech Corridor, Bengaluru, Karnataka — 560103, India
+                    Mohanwadi, Pune, Maharashtra — 411006, India
                   </p>
                   <div className="mt-3 flex items-center gap-1.5 text-[11px] text-[#0B3C91] font-semibold">
                     <Building2 className="w-3.5 h-3.5 text-[#10B981]" />
-                    <span>Corporate Secretarial & Legal Department</span>
+                    <span>Corporate Secretarial & Compliance Department</span>
                   </div>
                 </div>
               </div>
@@ -167,17 +166,17 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
-                    Telecommunication Desks
+                    Telecommunication Desk
                   </span>
                   <h3 className="text-base font-bold text-[#091E42] mt-0.5">
-                    Board Office & Customer Helpline
+                    Corporate Contact & Helpline
                   </h3>
                   <div className="mt-2 text-xs sm:text-sm text-slate-700 space-y-1">
-                    <p className="font-semibold text-slate-800">
-                      +91 (0) 80 4123 4567 <span className="text-slate-400 font-normal">(Board Secretariat)</span>
-                    </p>
-                    <p className="font-semibold text-emerald-700">
-                      1800 123 4567 <span className="text-slate-400 font-normal">(Toll-Free Customer Support)</span>
+                    <p className="font-semibold text-slate-800 flex items-center gap-2">
+                      <a href="tel:+917981853211" className="text-[#0B3C91] hover:underline font-bold text-sm">
+                        +91 79818 53211
+                      </a>
+                      <span className="text-slate-400 font-normal text-xs">(Official Contact)</span>
                     </p>
                   </div>
                   <p className="text-[11px] text-slate-400 mt-2 flex items-center gap-1">
