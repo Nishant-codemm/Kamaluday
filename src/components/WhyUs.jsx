@@ -1,14 +1,13 @@
 import React from 'react';
 import {
-  ShieldCheck,
-  Eye,
   Scale,
+  Eye,
+  Clock,
+  ShieldCheck,
+  BadgeCheck,
   Lock,
   Landmark,
-  BadgeCheck,
-  Clock,
-  FileCheck2,
-  CheckCircle2
+  ArrowRight
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -17,62 +16,42 @@ export default function WhyUs() {
     {
       id: 'foir',
       title: '50% Household Debt Cap',
-      subtitle: 'Over-Indebtedness Prevention',
-      icon: Scale,
-      color: '#0B3C91',
       badge: 'RBI Mandate',
       description:
-        'We never sanction credit that exceeds 50% of a household’s monthly income across all lenders. Our underwriting is engineered to prevent debt traps.',
-      points: [
-        'Automated 4-bureau deduplication and debt audit',
-        'Strict mathematical debt-service ceiling',
-        'Protects borrower financial sustainability'
-      ]
+        'Automated 4-bureau credit assessment ensuring total monthly debt repayments never exceed 50% of household income to prevent debt traps.',
+      icon: Scale,
+      color: '#0B3C91',
+      bgColor: 'bg-blue-50'
     },
     {
       id: 'kfs',
       title: 'Zero Hidden Charges',
-      subtitle: 'Full Upfront Transparency',
-      icon: Eye,
-      color: '#10B981',
       badge: 'Fair Disclosure',
       description:
-        'Every borrower receives a standardized 1-page Key Fact Statement (KFS) in their regional language clearly stating the exact APR, fees, and installment schedule.',
-      points: [
-        'Standardized 1-page vernacular KFS',
-        'Transparent reducing-balance interest rates',
-        'Zero prepayment penalties or foreclosure charges'
-      ]
+        'Standardized 1-page vernacular Key Fact Statement (KFS) detailing reducing-balance APR, processing fee, and zero foreclosure penalties.',
+      icon: Eye,
+      color: '#10B981',
+      bgColor: 'bg-emerald-50'
     },
     {
       id: 'recovery',
       title: 'Ethical Recovery Code',
-      subtitle: 'Dignity-First Engagement',
+      badge: 'Dignity First',
+      description:
+        'Strictly regulated contact hours (9:00 AM – 6:00 PM) with zero coercion, backed by an accessible 3-tier grievance redressal matrix.',
       icon: Clock,
       color: '#D97706',
-      badge: 'Code of Conduct',
-      description:
-        'Customer communications are strictly restricted to 09:00 AM – 06:00 PM. We maintain zero tolerance for coercive tactics or intimidation.',
-      points: [
-        'Strictly regulated contact hours (9 AM – 6 PM)',
-        'Zero harassment or high-pressure tactics',
-        'Direct 3-tier grievance redressal escalation'
-      ]
+      bgColor: 'bg-amber-50'
     },
     {
       id: 'governance',
       title: 'Maker-Checker Approval',
-      subtitle: 'Two-Tier Credit Sanctioning',
-      icon: ShieldCheck,
-      color: '#6366F1',
       badge: 'Institutional Rigor',
       description:
-        'Independent segregation of duties between field origination and central credit approval, ensuring unbiased, merit-based lending decisions.',
-      points: [
-        'Centralized independent underwriting review',
-        'Zero field-agent approval authority',
-        'Continuous internal audit and portfolio monitoring'
-      ]
+        'Independent central underwriting segregation separating field loan origination from credit sanctions to ensure unbiased approvals.',
+      icon: ShieldCheck,
+      color: '#6366F1',
+      bgColor: 'bg-indigo-50'
     }
   ];
 
@@ -81,7 +60,7 @@ export default function WhyUs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-14">
+        <div className="max-w-3xl mx-auto text-center mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0B3C91]/5 border border-[#0B3C91]/15 text-[#0B3C91] text-xs font-bold uppercase tracking-wider mb-3">
             <BadgeCheck className="w-3.5 h-3.5 text-[#10B981]" />
             Why Kamal Uday Finance
@@ -90,71 +69,49 @@ export default function WhyUs() {
             Institutional Safeguards Built for <span className="text-[#0B3C91]">Borrower Protection</span>
           </h2>
           <p className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed">
-            Our operational architecture prioritizes customer dignity, regulatory compliance, and transparent underwriting at every step of the lending journey.
+            Four non-negotiable operational commitments ensuring transparency, dignity, and regulatory adherence.
           </p>
         </div>
 
-        {/* 4 Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* 4 Clean Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {safeguards.map((card) => {
             const Icon = card.icon;
             return (
               <div
                 key={card.id}
-                className="p-6 sm:p-8 rounded-2xl bg-[#F8FAFC] border border-slate-200/90 hover:border-[#0B3C91]/30 hover:bg-white hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
+                className="p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 hover:border-[#0B3C91]/30 hover:bg-white hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  {/* Top Bar */}
-                  <div className="flex items-center justify-between mb-5">
+                  <div className="flex items-center justify-between mb-4">
                     <div
-                      className="w-12 h-12 rounded-xl flex items-center justify-center"
-                      style={{
-                        backgroundColor: `${card.color}15`,
-                        color: card.color
-                      }}
+                      className={`w-11 h-11 rounded-xl flex items-center justify-center ${card.bgColor}`}
+                      style={{ color: card.color }}
                     >
-                      <Icon className="w-6 h-6" />
+                      <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-white text-slate-600 border border-slate-200">
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-white text-slate-600 border border-slate-200">
                       {card.badge}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#091E42] group-hover:text-[#0B3C91] transition-colors">
+                  <h3 className="text-base font-bold text-[#091E42] group-hover:text-[#0B3C91] transition-colors">
                     {card.title}
                   </h3>
-                  <p className="text-xs text-slate-500 font-medium mt-0.5">
-                    {card.subtitle}
-                  </p>
 
-                  <p className="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                  <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                     {card.description}
                   </p>
-
-                  <div className="mt-5 space-y-2 pt-4 border-t border-slate-200/70">
-                    {card.points.map((pt, pIdx) => (
-                      <div key={pIdx} className="flex items-start gap-2 text-xs text-slate-700">
-                        <CheckCircle2
-                          className="w-3.5 h-3.5 shrink-0 mt-0.5"
-                          style={{ color: card.color }}
-                        />
-                        <span className="font-medium">{pt}</span>
-                      </div>
-                    ))}
-                  </div>
                 </div>
 
-                <div className="mt-6 pt-3 border-t border-slate-200/70 flex items-center justify-between text-xs text-slate-500">
-                  <span className="flex items-center gap-1.5 font-medium">
-                    <Lock className="w-3.5 h-3.5 text-slate-400" />
-                    Documented Fair Practice Policy
-                  </span>
+                <div className="mt-5 pt-3 border-t border-slate-200/60 flex items-center justify-between text-xs">
+                  <span className="text-slate-400 font-medium">Policy Standard</span>
                   <Link
                     to="/compliance"
-                    className="font-bold text-xs hover:underline"
-                    style={{ color: card.color }}
+                    className="font-bold text-[#0B3C91] hover:underline flex items-center gap-1"
                   >
-                    View Code →
+                    <span>View Code</span>
+                    <ArrowRight className="w-3 h-3" />
                   </Link>
                 </div>
               </div>
@@ -162,12 +119,12 @@ export default function WhyUs() {
           })}
         </div>
 
-        {/* Governance Assurance Banner */}
-        <div className="mt-10 p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600">
-          <div className="flex items-center gap-2.5">
+        {/* Governance Assurance Ticker */}
+        <div className="mt-8 p-4 rounded-xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
+          <div className="flex items-center gap-2">
             <Landmark className="w-4 h-4 text-[#0B3C91] shrink-0" />
-            <span className="font-semibold text-slate-800">Regulatory Oversight:</span>
-            <span>Board-approved Credit, Risk, Pricing, Fair Practices & Grievance Redressal Policies</span>
+            <span className="font-semibold text-slate-800">Governance Framework:</span>
+            <span>Board-approved Credit, Risk, Pricing, Fair Practices & Grievance Policies</span>
           </div>
           <div className="flex items-center gap-3 text-slate-500 font-medium shrink-0">
             <span>• Section 45-IA Framework</span>

@@ -193,9 +193,9 @@ export default function InteractiveFoirCalculator() {
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-slate-100 bg-slate-50 p-3 rounded-xl text-[11px] text-slate-500 leading-normal">
-                <span className="font-semibold text-slate-700">Fair Lending Guarantee: </span>
-                Kamal Uday Finance never sanctions credit that breaches household repayment thresholds. Over-indebtedness prevention is non-negotiable.
+              <div className="mt-6 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+                <span className="font-semibold text-slate-700">RBI Microfinance Standard:</span>
+                <span>Max 50% monthly FOIR ceiling across all lenders</span>
               </div>
             </div>
 
